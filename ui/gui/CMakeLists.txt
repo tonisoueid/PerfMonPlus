@@ -1,0 +1,75 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2026 PerfMonPlus contributors
+
+add_library(pmp_gui STATIC
+  src/animation_clock.cpp
+  src/app_settings.cpp
+  src/colors_popover.cpp
+  src/main_window.cpp
+  src/culprits_popover.cpp
+  src/meter_widgets.cpp
+  src/performance_page.cpp
+  src/placeholder_page.cpp
+  src/clock_source.cpp
+  src/connections_page.cpp
+  src/installed_apps_page.cpp
+  src/treemap_widget.cpp
+  src/benchmarks_page.cpp
+  src/video_recorder.cpp
+  src/disk_space_page.cpp
+  src/recording_controller.cpp
+  src/replay_controller.cpp
+  src/replay_bar.cpp
+  src/power_freq_page.cpp
+  src/sampling_service.cpp
+  src/services_page.cpp
+  src/sidebar.cpp
+  src/process_actions_controller.cpp
+  src/process_details_pane.cpp
+  src/process_table_model.cpp
+  src/processes_page.cpp
+  src/screensaver.cpp
+  src/settings_dialog.cpp
+  src/startup_page.cpp
+  src/update_checker.cpp
+  src/status_bar.cpp
+  src/summary_page.cpp
+  src/system_info_page.cpp
+  src/users_page.cpp
+  include/perfmonplus/gui/animation_clock.hpp
+  include/perfmonplus/gui/colors_popover.hpp
+  include/perfmonplus/gui/main_window.hpp
+  include/perfmonplus/gui/culprits_popover.hpp
+  include/perfmonplus/gui/meter_widgets.hpp
+  include/perfmonplus/gui/power_freq_page.hpp
+  include/perfmonplus/gui/clock_source.hpp
+  include/perfmonplus/gui/connections_page.hpp
+  include/perfmonplus/gui/installed_apps_page.hpp
+  include/perfmonplus/gui/treemap_widget.hpp
+  include/perfmonplus/gui/benchmarks_page.hpp
+  include/perfmonplus/gui/video_recorder.hpp
+  include/perfmonplus/gui/disk_space_page.hpp
+  include/perfmonplus/gui/recording_controller.hpp
+  include/perfmonplus/gui/replay_controller.hpp
+  include/perfmonplus/gui/replay_bar.hpp
+  include/perfmonplus/gui/performance_page.hpp
+  include/perfmonplus/gui/sampling_service.hpp
+  include/perfmonplus/gui/services_page.hpp
+  include/perfmonplus/gui/sidebar.hpp
+  include/perfmonplus/gui/graph_cursor.hpp
+  include/perfmonplus/gui/process_actions_controller.hpp
+  include/perfmonplus/gui/process_details_pane.hpp
+  include/perfmonplus/gui/process_table_model.hpp
+  include/perfmonplus/gui/processes_page.hpp
+  include/perfmonplus/gui/screensaver.hpp
+  include/perfmonplus/gui/settings_dialog.hpp
+  include/perfmonplus/gui/startup_page.hpp
+  include/perfmonplus/gui/update_checker.hpp
+  include/perfmonplus/gui/status_bar.hpp
+  include/perfmonplus/gui/summary_page.hpp
+  include/perfmonplus/gui/system_info_page.hpp
+  include/perfmonplus/gui/users_page.hpp
+)
+target_include_directories(pmp_gui PUBLIC include)
+target_link_libraries(pmp_gui PUBLIC Qt6::Widgets Qt6::Network pmp_core pmp_linux pmp_viewmodel pmp_trace)
+pmp_set_warnings(pmp_gui)
