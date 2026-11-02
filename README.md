@@ -247,9 +247,10 @@ platform/linux/  pmp_linux: CPU, memory, disk, network, process, GPU, NPU, energ
                  startup and system-info collectors; process inspector and identity-checked process actions; connections,
                  installed-software, disk-scan and benchmark engines
 ui/viewmodel/    pmp_viewmodel: themes, graph geometry, meter maths, page text (no Qt; unit-tested)
-ui/gui/          pmp_gui: Qt 6 widgets, pages, sampling thread, animation clock
+ui/gui/          pmp_gui: Qt 6 widgets, pages, sampling thread, animation clock, embedded app icon (resources/)
 apps/perfmonplus the GUI application
 apps/probe/      perfmonplus-probe CLI and JSON serialisation
+packaging/       perfmonplus.desktop (installed with the icon; see Install)
 tests/           unit tests (fake /proc via FakeRoot) and live tests
 docs/            functional spec and implementation plans
 ```
