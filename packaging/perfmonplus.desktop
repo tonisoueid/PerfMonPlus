@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+[Desktop Entry]
+Type=Application
+Name=PerfMonPlus
+GenericName=System Monitor
+Comment=See which process or subsystem is slowing your machine down
+Exec=perfmonplus
+Icon=perfmonplus
+Terminal=false
+Categories=System;Monitor;
+Keywords=performance;monitor;cpu;memory;task manager;
+StartupWMClass=perfmonplus

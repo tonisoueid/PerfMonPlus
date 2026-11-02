@@ -111,6 +111,7 @@ if(PMP_BUILD_GUI)
     gui/test_sampling_service.cpp
     gui/test_meter_widgets.cpp
     gui/test_shell.cpp
+    gui/test_app_icon.cpp
     gui/test_summary_page.cpp
     gui/test_performance_page.cpp
     gui/test_system_info_page.cpp

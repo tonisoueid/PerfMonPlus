@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<RCC version="1.0">
+  <qresource prefix="/">
+    <file alias="icons/perfmonplus.svg">perfmonplus.svg</file>
+  </qresource>
+</RCC>

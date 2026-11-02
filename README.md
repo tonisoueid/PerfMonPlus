@@ -53,6 +53,16 @@ cmake --build build-core && ctest --test-dir build-core -LE live
 A Debug build is for development: it is several times slower, so the Benchmarks page says its scores are not
 comparable with Release ones (and never mixes them in the history comparison).
 
+### Install (dock and launcher icon)
+
+```bash
+sudo cmake --install build-rel          # or: cmake --install build-rel --prefix ~/.local
+```
+
+This installs the binary, `perfmonplus.desktop` and the scalable icon into `share/icons/hicolor/scalable/apps`. The
+app sets its desktop file name to `perfmonplus`, so the dock shows the icon instead of a generic gear (you may need to
+log out and in, or run `gtk-update-icon-cache`, for a fresh install to be picked up).
+
 ## Run
 
 ### The GUI
