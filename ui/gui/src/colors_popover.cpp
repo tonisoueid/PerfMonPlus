@@ -21,6 +21,7 @@ ColorsPopover::ColorsPopover(const AppSettings& initial, QWidget* parent)
       frameRate_(new QComboBox(this)),
       lowEffects_(new QCheckBox("Low-effects mode", this)) {
     setObjectName("popover");
+    setAttribute(Qt::WA_StyledBackground, true);  // let the themed #popover rule paint this top-level popup
     dark_->setProperty("theme", "dark");
     light_->setProperty("theme", "light");
     green_->setProperty("theme", "green");
