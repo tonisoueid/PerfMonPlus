@@ -79,6 +79,9 @@ QToolButton:hover { background: %5; border-radius: 6px; }
 QLineEdit, QComboBox, QPlainTextEdit { background: %6; border: 1px solid %7; border-radius: 6px; padding: 5px 8px; color: %2; selection-background-color: %3; }
 QComboBox QAbstractItemView { background: %6; color: %2; selection-background-color: %3; border: 1px solid %7; }
 QComboBox::drop-down { border: none; width: 18px; }
+QSlider::groove:horizontal { background: %5; height: 4px; border-radius: 2px; }
+QSlider::sub-page:horizontal { background: %3; border-radius: 2px; }
+QSlider::handle:horizontal { background: %3; width: 12px; margin: -5px 0; border-radius: 6px; }
 QPushButton { background: %5; border: 1px solid %7; border-radius: 6px; padding: 6px 14px; color: %2; }
 QPushButton:hover { background: %3; color: white; }
 QPushButton:disabled { color: %4; }
@@ -91,6 +94,7 @@ QMenuBar::item:selected { background: %5; }
 QMenu { background: %6; color: %2; border: 1px solid %7; }
 QMenu::item:selected { background: %3; color: white; }
 QMenu::item:disabled { color: %4; }
+#popover { background: %6; border: 1px solid %7; border-radius: 8px; }
 #chip { background: %5; border-radius: 6px; padding: 6px 10px; }
 QProgressBar { background: %5; border: none; border-radius: 4px; max-height: 8px; }
 QProgressBar::chunk { background: %3; border-radius: 4px; }

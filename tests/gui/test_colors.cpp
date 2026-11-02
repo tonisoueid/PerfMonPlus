@@ -144,3 +144,23 @@ TEST_CASE("an unknown saved theme falls back to dark", "[gui][colors]") {
     REQUIRE(qRed(p) == d.r);
     REQUIRE(qBlue(p) == d.b);
 }
+
+TEST_CASE("the colors popover paints the themed panel colour, never white, in every theme", "[gui][colors]") {
+    MainWindow w;
+    prepared(w);
+    for (const char* name : {"dark", "light", "green"}) {
+        w.applySettings(with(name, 7));
+        ColorsPopover pop(with(name, 7), &w);
+        pop.adjustSize();
+        pop.show();
+        QApplication::processEvents();
+        const auto img = pop.grab().toImage().convertToFormat(QImage::Format_RGB32);
+        const QRgb p = img.pixel(img.width() - 6, 6);
+        const auto panel = vm::themeByName(name)->panel;
+        INFO(name);
+        REQUIRE(qRed(p) == panel.r);
+        REQUIRE(qGreen(p) == panel.g);
+        REQUIRE(qBlue(p) == panel.b);
+        pop.hide();
+    }
+}
