@@ -3,6 +3,7 @@
 
 #include <perfmonplus/core/version.hpp>
 #include <perfmonplus/gui/disk_space_page.hpp>
+#include <perfmonplus/gui/app_icon.hpp>
 #include <perfmonplus/gui/async.hpp>
 #include <perfmonplus/gui/main_window.hpp>
 #include <perfmonplus/gui/performance_page.hpp>
@@ -68,6 +69,8 @@ int main(int argc, char** argv) {
     }
 
     QApplication app(argc, argv);
+    QApplication::setDesktopFileName(QStringLiteral("perfmonplus"));  // lets the dock match perfmonplus.desktop
+    app.setWindowIcon(pmp::gui::applicationIcon());
     QSettings store("PerfMonPlus", "PerfMonPlus");
     auto settings = pmp::gui::AppSettings::load(store);
     pmp::gui::AppSettings persisted = settings;  // what is written back: never the one-run overrides below

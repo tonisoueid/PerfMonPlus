@@ -19,6 +19,7 @@ option(PMP_BUILD_GUI "Build the Qt 6 user interface (needs Qt 6.4 Widgets and Ne
 if(PMP_BUILD_GUI)
   find_package(Qt6 6.4 REQUIRED COMPONENTS Widgets Network)
   set(CMAKE_AUTOMOC ON)
+  set(CMAKE_AUTORCC ON)
 endif()
 
 enable_testing()

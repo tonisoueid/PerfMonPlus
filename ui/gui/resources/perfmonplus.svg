@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- Copyright (C) 2026 PerfMonPlus contributors -->
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b3445"/>
+      <stop offset="1" stop-color="#121722"/>
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2ee6a6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#2ee6a6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="28" width="224" height="160" rx="18" fill="url(#bg)" stroke="#5b6b86" stroke-width="6"/>
+  <rect x="104" y="188" width="48" height="24" fill="#5b6b86"/>
+  <rect x="72" y="208" width="112" height="14" rx="7" fill="#5b6b86"/>
+  <g stroke="#3a465c" stroke-width="2">
+    <path d="M32 78H224M32 108H224M32 138H224"/>
+  </g>
+  <path d="M32 160 L66 128 L92 142 L124 84 L152 118 L178 66 L224 96 L224 168 L32 168 Z" fill="url(#fill)"/>
+  <path d="M32 160 L66 128 L92 142 L124 84 L152 118 L178 66 L224 96" fill="none" stroke="#2ee6a6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="224" cy="96" r="8" fill="#ffd166"/>
+</svg>

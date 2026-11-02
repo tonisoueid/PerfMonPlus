@@ -3,6 +3,8 @@
 
 add_library(pmp_gui STATIC
   src/animation_clock.cpp
+  src/app_icon.cpp
+  resources/perfmonplus.qrc
   src/app_settings.cpp
   src/colors_popover.cpp
   src/main_window.cpp
@@ -57,6 +59,7 @@ add_library(pmp_gui STATIC
   include/perfmonplus/gui/services_page.hpp
   include/perfmonplus/gui/sidebar.hpp
   include/perfmonplus/gui/graph_cursor.hpp
+  include/perfmonplus/gui/app_icon.hpp
   include/perfmonplus/gui/process_actions_controller.hpp
   include/perfmonplus/gui/process_details_pane.hpp
   include/perfmonplus/gui/process_table_model.hpp

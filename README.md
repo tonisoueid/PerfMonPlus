@@ -53,6 +53,16 @@ cmake --build build-core && ctest --test-dir build-core -LE live
 A Debug build is for development: it is several times slower, so the Benchmarks page says its scores are not
 comparable with Release ones (and never mixes them in the history comparison).
 
+### Install (dock and launcher icon)
+
+```bash
+sudo cmake --install build-rel          # or: cmake --install build-rel --prefix ~/.local
+```
+
+This installs the binary, `perfmonplus.desktop` and the scalable icon into `share/icons/hicolor/scalable/apps`. The
+app sets its desktop file name to `perfmonplus`, so the dock shows the icon instead of a generic gear (you may need to
+log out and in, or run `gtk-update-icon-cache`, for a fresh install to be picked up).
+
 ## Run
 
 ### The GUI
@@ -237,9 +247,10 @@ platform/linux/  pmp_linux: CPU, memory, disk, network, process, GPU, NPU, energ
                  startup and system-info collectors; process inspector and identity-checked process actions; connections,
                  installed-software, disk-scan and benchmark engines
 ui/viewmodel/    pmp_viewmodel: themes, graph geometry, meter maths, page text (no Qt; unit-tested)
-ui/gui/          pmp_gui: Qt 6 widgets, pages, sampling thread, animation clock
+ui/gui/          pmp_gui: Qt 6 widgets, pages, sampling thread, animation clock, embedded app icon (resources/)
 apps/perfmonplus the GUI application
 apps/probe/      perfmonplus-probe CLI and JSON serialisation
+packaging/       perfmonplus.desktop (installed with the icon; see Install)
 tests/           unit tests (fake /proc via FakeRoot) and live tests
 docs/            functional spec and implementation plans
 ```
